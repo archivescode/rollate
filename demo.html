@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="jquery-ui.min.js"></script>
+	<script type="text/javascript" src="src/rouletteWheel.js"></script>
+	<script type="text/javascript">
+		$(function(){
+
+			var itemsToShow = parseInt(12);
+			console.log(itemsToShow);
+			var items = {};
+			for(var i=0; i < 36; i++){
+				items[i] = 'ITEM ' + (i+1);
+			}
+		  $('#canvas').rouletteWheel({
+		    items : items,
+		    spinTimeTotal: 10000,
+		    selected : function(key, value){
+		      alert('SELECTED : ' + key + ' => ' + value);
+		    },
+		    spinText : 'Click Me',
+		    mustSelected:1,
+		  });
+
+		});
+	</script>
+	<title></title>
+</head>
+<body>
+
+	<canvas id="canvas" width="500" height="500"></canvas>
+	
+</body>
+</html>
