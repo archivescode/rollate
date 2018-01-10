@@ -262,7 +262,7 @@ $.widget('javobyte.rouletteWheel', {
         this._options.rotating = true;
         this._options.spinAngleStart = Math.random() * 100 + 5 * Math.random() + 5 * Math.random() + 2 * Math.random();
         this._options.spinTime = 0;
-        this._options.spinTimeTotal = this.options.spinTimeTotal;
+        this._options.spinTimeTotal = 10000;
         this._rotate();
     },
 
